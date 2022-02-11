@@ -20,8 +20,11 @@
             <script>
                 function go() {
                     var input = document.getElementById('url-target');
-                    if (input.value) {
-                    input.indexOf("https://") >= 0?(window.open("https://womginx-pr0xy.herokuapp.com/main/"+input.value)):index.value.indexOf("https://")    
+                    if( url.indexOf("https://") == 0 ) {
+                        alert("yeah!");
+                    } 
+                    else {
+                        alert("No no no!");
                     } 
                     
                     else {
