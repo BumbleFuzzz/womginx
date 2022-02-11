@@ -20,11 +20,10 @@
             <script>
                 function go() {
                     var input = document.getElementById('url-target');
-                    if( input.indexOf("https://") == 0 ) {
-                        alert("yeah!");
-                    }
-                    else {
-                        alert('Please provide a link. It does not require https://.');
+                    var pattern = new RegExp('^(https?|ftp)://');
+                    if(!pattern.test(input.value)) {
+                        goTo = "https://" + input.value;
+                        window.open("https://womginx-pr0xy.herokuapp.com/main/"+goTo);
                     }
                 }
             </script>
