@@ -20,16 +20,12 @@
             <script>
                 function go() {
                     var input = document.getElementById('url-target');
-                    var pattern = new RegExp('^(https?|ftp)://');
-                    if(!pattern.test(input.value)) {
-                        var goTo = "https://" + input.value;
-                        var window = window.open("https://womginx-a.herokuapp.com/main/"+goTo);
+                    if (input.value) {
+                        window.location.href = '/main/' + input.value;
+                    } 
+                    else {
+                        alert('Please provide a link. It does not require https://.');
                     }
-                    else: {
-                        var goTo = input.value;
-                        var window = window.open("https://womginx-a.herokuapp.com/main/https://"+goTo);
-                    }
-                 
                 }
             </script>
             <span class="w3-xlarge">Input your URL here: </span>
