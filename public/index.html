@@ -22,12 +22,12 @@
                     var input = document.getElementById('url-target');
                     var pattern = new RegExp('^(https?|ftp)://');
                     if(!pattern.test(input.value)) {
-                        goTo = "https://" + input.value;
-                        window.open("https://womginx-a.herokuapp.com/main/"+goTo);
+                        var goTo = "https://" + input.value;
+                        var window = window.open("https://womginx-a.herokuapp.com/main/"+goTo);
                     }
                     else: {
-                        goTo = input.value;
-                        window.open("https://womginx-a.herokuapp.com/main/https://"+goTo);
+                        var goTo = input.value;
+                        var window = window.open("https://womginx-a.herokuapp.com/main/https://"+goTo);
                     }
                  
                 }
